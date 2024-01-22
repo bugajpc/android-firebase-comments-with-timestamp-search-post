@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/post_uid_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toStartOf="@+id/delete_imageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/post_text_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="TextView"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/post_uid_textView"
+        app:layout_constraintStart_toStartOf="@+id/post_uid_textView"
+        app:layout_constraintTop_toBottomOf="@+id/post_uid_textView" />
+
+    <ImageView
+        android:id="@+id/delete_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/post_uid_textView"
+        app:srcCompat="@drawable/baseline_delete_forever_24" />
+
+    <ImageView
+        android:id="@+id/follow_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/post_text_textView"
+        app:layout_constraintEnd_toEndOf="@+id/delete_imageView"
+        app:layout_constraintStart_toStartOf="@+id/delete_imageView"
+        app:layout_constraintTop_toBottomOf="@+id/delete_imageView"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/baseline_favorite_border_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
