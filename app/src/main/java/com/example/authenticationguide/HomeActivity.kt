@@ -54,7 +54,8 @@ class HomeActivity : AppCompatActivity() {
                 Log.d("Home", "Error getting documents: ", exception)
             }
         searchButton.setOnClickListener {
-            db.collection("posts").whereGreaterThanOrEqualTo("text", searchEditText.text.toString())
+            db.collection("posts")
+                .whereGreaterThanOrEqualTo("text", searchEditText.text.toString())
                 .get()
                 .addOnSuccessListener { result ->
                     posts.clear()
